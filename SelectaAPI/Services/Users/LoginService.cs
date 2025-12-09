@@ -22,7 +22,7 @@ namespace SelectaAPI.Services.Users
 
         }
 
-        public async Task<LoginResponseDTO> LoginDoCliente(LoginRequestDTO loginRequest)
+        public async Task<string> LoginDoCliente(LoginRequestDTO loginRequest)
         {
             var cliente = await _loginRepository.BuscarCredenciaisDoCliente(loginRequest.Email);
             if (cliente == null) return null; 
@@ -33,17 +33,10 @@ namespace SelectaAPI.Services.Users
             var token = TokenService.GenerateJwtTokenByClient(cliente);
 
 
-            return new LoginResponseDTO
-            {
-                Token = token,
-                Nome = cliente.Nome,
-                NivelAcesso = "cliente",
-                IdCliente = cliente.IdCliente,
-                Email = cliente.Email,
-            };
+            return token;
         }
 
-        public async Task<LoginResponseDTO> LoginDoFuncionario(LoginRequestDTO loginRequest)
+        public async Task<string> LoginDoFuncionario(LoginRequestDTO loginRequest)
         {
             var funcionario = await _loginRepository.BuscarCredenciaisDoFuncionario(loginRequest.Email);
             if (funcionario == null) return null;
@@ -55,14 +48,7 @@ namespace SelectaAPI.Services.Users
             var token = TokenService.GenerateJwtTokenByEmployee(funcionario);
 
 
-            return new LoginResponseDTO
-            {
-                Token = token,
-                Nome = funcionario.Nome,
-                NivelAcesso = funcionario.NivelAcesso,
-                IdFuncionario = funcionario.IdFuncionario,
-                Email = funcionario.Email,
-            };
+            return token;
         }
     }
 }
