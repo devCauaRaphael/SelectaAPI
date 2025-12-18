@@ -32,15 +32,6 @@ A Selecta API foi criada para:
 
 ---
 
-## 📌 Avisos
-
-- Todas as interfaces e controllers possuem **`summary` implementado**.  
-- A arquitetura segue boas práticas de separação de responsabilidades.  
-- A API pode ser facilmente adaptada para microserviços no futuro.  
-- Documentação completa via **Swagger**.
-
----
-
 ## ▶️ Como executar o projeto
 
 ### 1️⃣ Clonar o repositório
