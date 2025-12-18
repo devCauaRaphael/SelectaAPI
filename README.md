@@ -48,15 +48,11 @@ A Selecta API foi criada para:
 git clone https://github.com/devCauaRaphael/SelectaAPI.git 
 cd SelectaAPI
 
-2️⃣ Configurar o appsettings.json
-{
-  "AWS": {
-    "BucketName": "seu-bucket",
-    "Region": "sa-east-1",
-    "AccessKey": "sua-access-key",
-    "SecretKey": "sua-secret-key"
-  }
-}
+2️⃣ Crie um arquivo .env e preencha as seguintes variaveis de ambiente:
+AWS_REGION = sa-east-1
+AWS_ACCESS_KEY_ID = suaAccessKey
+AWS_SECRET_ACCESS_KEY = suaSecretKey
+JWT_KEY = Zk9h8dU2mQwXrL9tPbN3sVy7cJk5aZx0RjWmFnTqYpBvHsKdLu1oE3Cg6Df4Sh7T
 
 3️⃣ Restaurar dependências
 dotnet restore
@@ -67,6 +63,4 @@ dotnet run
 5️⃣ Acessar o Swagger
 https://localhost:7065/swagger/index.html
 
-Sinta-se livre para enviar PRs, sugestões ou melhorias!
-Esse projeto faz parte do meu TCC e continua evoluindo diariamente.
-
+Container desativo por ultrapassar o limite do plano gratuito da Amazon S3
