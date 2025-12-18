@@ -1,9 +1,9 @@
 # 🚀 Selecta API — Backend da Plataforma de Vendas
 
-![Banner do Projeto](https://via.placeholder.com/1000x250?text=Selecta+API)
-
 A **Selecta API** é o backend completo de uma plataforma de vendas inspirada no Mercado Livre, construída em **ASP.NET Core** com **MySQL**. Toda a aplicação foi projetada pensando em escalabilidade, integração limpa com React e práticas profissionais de arquitetura.
-
+    
+🎥 Demonstração do projeto:  
+https://youtu.be/w0WsiXkFmgM?si=kvHTewI93AHZH2K7
 ---
 
 ## ⚙️ Tecnologias Utilizadas
